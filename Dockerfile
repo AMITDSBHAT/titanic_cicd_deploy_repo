@@ -1,5 +1,5 @@
 # pull python base image
-FROM python:3.11
+FROM python:3.10
 
 # copy application files
 ADD /titanic_model_api /titanic_model_api/
