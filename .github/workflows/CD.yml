@@ -14,12 +14,12 @@ jobs:
        - name: Pull Docker Image
          env: 
            DOCKER_USER: ${{ secrets.DOCKER_USER_NAME }}
-         run: sudo docker pull $DOCKER_USER/titanic-fastapi-22aug:latest
+         run: sudo docker pull $DOCKER_USER/titanic_fastapi_cicd_amit:latest
     
        - name: Delete Old Docker Container
-         run: sudo docker rm -f titanic-fastapi-container || true
+         run: sudo docker rm -f titanic_fastapi_cicd_amit || true
     
        - name: Run Docker Container
          env: 
            DOCKER_USER: ${{ secrets.DOCKER_USER_NAME }}
-         run: sudo docker run -it -d -p 8001:8001 --name titanic-fastapi-container $DOCKER_USER/titanic-fastapi-10aug:latest
+         run: sudo docker run -it -d -p 8001:8001 --name titanic_fastapi_cicd_amit $DOCKER_USER/titanic_fastapi_cicd_amit:latest
